@@ -21,6 +21,7 @@ func ConsultaScore(w http.ResponseWriter, r *http.Request) {
 	// Verifica se o método está correto
 	if r.Method != http.MethodPost {
 		http.Error(w, "Método não disponível. Use POST!", http.StatusBadRequest)
+		return
 	}
 
 	// Lê o corpo da requisição

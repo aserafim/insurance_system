@@ -19,8 +19,8 @@ type ScoreRetorno struct {
 func ConsultaScore(w http.ResponseWriter, r *http.Request) {
 
 	// Verifica se o método está correto
-	if r.Method != http.MethodGet {
-		http.Error(w, "Método não disponível. Use GET!", http.StatusBadRequest)
+	if r.Method != http.MethodPost {
+		http.Error(w, "Método não disponível. Use POST!", http.StatusBadRequest)
 	}
 
 	// Lê o corpo da requisição

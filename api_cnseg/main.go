@@ -23,8 +23,8 @@ func main() {
 
 func GetQtdSinistros(w http.ResponseWriter, r *http.Request) {
 
-	if r.Method != http.MethodPost {
-		http.Error(w, "Método não permitido. Use POST!", http.StatusMethodNotAllowed)
+	if r.Method != http.MethodGet {
+		http.Error(w, "Método não permitido. Use GET!", http.StatusMethodNotAllowed)
 		return
 	}
 
